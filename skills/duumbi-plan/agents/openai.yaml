@@ -1,0 +1,4 @@
+interface:
+  display_name: "DUUMBI Plan"
+  short_description: "Szándék és hatókör tisztázása intent.md-ben"
+  default_prompt: "A $duumbi-plan segítségével tisztázd ezt a funkciószeletet, és készíts intent.md dokumentumot."

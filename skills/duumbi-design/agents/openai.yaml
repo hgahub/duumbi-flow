@@ -1,0 +1,4 @@
+interface:
+  display_name: "DUUMBI Design"
+  short_description: "Viselkedés és műszaki szerződés spec.md-ben"
+  default_prompt: "A $duumbi-design segítségével dolgozd ki a funkció spec.md dokumentumát."

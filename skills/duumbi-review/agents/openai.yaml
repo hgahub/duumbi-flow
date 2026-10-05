@@ -1,0 +1,4 @@
+interface:
+  display_name: "DUUMBI Review"
+  short_description: "Bizonyítékokra épülő review készítése"
+  default_prompt: "A $duumbi-review segítségével vizsgáld felül a szeletet, és készíts review.md-t."

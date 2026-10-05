@@ -1,0 +1,17 @@
+repos:
+  - repo: local
+    hooks:
+      - id: validate-skills
+        name: Validate skill package
+        entry: python scripts/validate.py
+        language: python
+        additional_dependencies: ["PyYAML>=6.0,<7"]
+        pass_filenames: false
+        always_run: true
+      - id: validator-tests
+        name: Test validator failure cases
+        entry: python -m unittest discover -s tests -v
+        language: python
+        additional_dependencies: ["PyYAML>=6.0,<7"]
+        pass_filenames: false
+        always_run: true
