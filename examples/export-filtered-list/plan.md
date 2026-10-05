@@ -1,21 +1,21 @@
-# Végrehajtási terv
+# Execution plan
 
-Forrás: [specifikáció](spec.md). **Csak terv; egy lépés sem futott le.**
+Source: [specification](spec.md). **Plan only; no step has been executed.**
 
-| Lépés | Ellenőrzés | Állapot |
+| Step | Verification | State |
 | --- | --- | --- |
-| Exportpolitika és listanézet vizsgálata | Adathatár és engedélyezett mezők döntése visszakereshető. | Nyitott döntés |
-| Kimenet előállítása a látható sorokból | JSON-visszaolvasás, sorrend, explicit mezőlista. | Nem indult |
-| Gomb és letöltés bekötése | Valódi letöltés tartalmát ellenőrző happy-path próba. | Nem indult |
-| Üres adat, különleges karakter, rejtett mező, hibaút | Releváns automatizált próbák és meglévő regressziók. | Nem indult |
-| Felhasználói próba és review | Értékdöntés és kódsors rögzítése. | Nem indult |
+| Examine export policy and list view | A traceable decision defines the data boundary and permitted fields. | Open decision |
+| Generate output from visible rows | JSON round-trip, order, and explicit field list. | Not started |
+| Connect button and download | A happy-path test checks the actual downloaded content. | Not started |
+| Cover empty data, special characters, hidden fields, and failures | Relevant automated tests and existing regressions. | Not started |
+| User trial and review | Record the value decision and code disposition. | Not started |
 
-A konkrét fájlok, parancsok és függőségek a célprojekt megvizsgálása után kerülnek ide. Új exportkönyvtár csak bizonyított szükség esetén kell.
+Add specific files, commands, and dependencies after inspecting the target project. Introduce an export library only if a need is established.
 
-## Helyreállítás
+## Recovery
 
-Az export funkció eltávolítása vagy kikapcsolása; a meglévő listázás ellenőrzése. Adatmigráció nem tervezett.
+Remove or disable export and check the existing list view. No data migration is planned.
 
-## Tényleges eredmény
+## Actual result
 
-Implementáció, build és tesztfutás nincs. Értékdöntés, M1 és discard/evolve/rewrite döntés még nem állítható. Következő lépés: a nyitott exportpolitika tisztázása, majd a felhatalmazott megvalósítás.
+No implementation, build, or test run exists. A value decision, M1, and discard/evolve/rewrite decision cannot yet be claimed. Next step: resolve the export policy question, then carry out authorized implementation.

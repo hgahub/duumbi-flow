@@ -1,21 +1,21 @@
-# Specifikáció
+# Specification
 
-Kapcsolódó szándék: intent.md, ha létezik.
+Related intent: intent.md, if available.
 
-## Viselkedési szerződés
-Megfigyelhető működés, nem célok és elfogadási példák.
+## Behavioral contract
+Observable behavior, non-goals, and acceptance examples.
 
-## Adatok és határok
-Interfészek, hozzáférések, adatáramlás, kompatibilitás.
+## Data and boundaries
+Interfaces, access controls, data flows, and compatibility.
 
-## Hibautak
-Érvénytelen bemenet, részleges kudarc és helyreállítás, ahol releváns.
+## Failure paths
+Invalid input, partial failure, and recovery where relevant.
 
-## Megoldási döntések
-A választott megoldás és indoka; javaslatok külön megjelölve.
+## Solution decisions
+The chosen solution and its rationale; proposals marked separately.
 
-## Ellenőrzés és célértékek
-A működés, alapkövetelmények és releváns teljesítmény/élmény ellenőrzése.
+## Verification and targets
+Checks for behavior, invariants, and relevant performance/UX goals.
 
-## Nyitott kérdések és források
-A megvalósítást akadályozó kérdések, érvényes döntések és bizonyítékok.
+## Open questions and sources
+Implementation blockers, applicable decisions, and evidence.

@@ -1,33 +1,33 @@
-# Az export szerződése
+# Export contract
 
-Forrás: [intent](intent.md). **Feltételes tervezési példa, nem elfogadott termékdöntés.**
+Source: [intent](intent.md). **Conditional design example, not an accepted product decision.**
 
-## Megfigyelhető működés
+## Observable behavior
 
-- Az „Aktuális oldal exportálása” gomb a kattintás pillanatában látható sorok pillanatképét menti.
-- UTF-8 JSON-tömb készül, elemenként kizárólag `id`, `title`, `status` mezőkkel, a látható sorrendben.
-- Az üres lista kimenete `[]`. A fájlnév `tasks.json`.
-- A meglévő, jogosultságszűrt listanézet adatait használjuk; nincs új hálózati lekérdezés. A teljes adatobjektum nem szerializálható válogatás nélkül.
-- Letöltésindítási hiba esetén érthető hibaüzenet jelenik meg, a lista változatlan. A böngészőnek átadott letöltésből nem állítjuk, hogy a fájl lemezre mentése sikerült.
+- The “Export current page” button saves a snapshot of the rows visible at the moment of the click.
+- Produce a UTF-8 JSON array, with only `id`, `title`, and `status` per item, preserving visible order.
+- An empty list produces `[]`. The file name is `tasks.json`.
+- Use the existing list view's authorization-filtered data; do not make a new network request. Do not indiscriminately serialize entire data objects.
+- If starting the download fails, show an understandable error and leave the list unchanged. Handing a download to the browser does not establish successful saving to disk.
 
-## Korlát és nyitott kérdés
+## Constraint and open question
 
-A meglévő listanézet hozzáférési védelmét előbb meg kell vizsgálni. A megtekintési jog önmagában nem bizonyítja az exportálás engedélyét; az exportpolitika döntése nyitott. Nem kerülhet új adatáramlás élesbe ennek tisztázása előtt.
+Examine the existing list view's access controls first. Permission to view data does not by itself establish permission to export it; the export policy decision remains open. Do not introduce a new production data flow before resolving this.
 
-## Ellenőrzési példák
+## Verification examples
 
-| Eset | Elvárt eredmény |
+| Case | Expected result |
 | --- | --- |
-| Szűrt, rendezett lista | A letöltött JSON pontosan a látható sorokat és sorrendet tartalmazza. |
-| Üres lista | Érvényes, üres JSON-tömb. |
-| Ékezet és idézőjel a címben | Visszaolvasáskor változatlan szöveg. |
-| Belső mező a lista adataiban | A fájlban nem szerepel. |
-| Letöltésindítási hiba | Hibaüzenet; nincs hamis sikerjelzés. |
+| Filtered, sorted list | Downloaded JSON contains exactly the visible rows in their order. |
+| Empty list | A valid, empty JSON array. |
+| Accented characters and quotation marks in a title | Text is unchanged after reading the file back. |
+| Internal field in list data | The field is absent from the file. |
+| Failure to start the download | An error message, with no false success indication. |
 
-M1-hez a szűrt lista valódi fájlkimenetét ellenőrző automatizált smoke/E2E próba kell; az adat- és hozzáférési minimum előfeltétel. M2-höz a releváns negatív és hibautak is szükségesek.
+M1 requires an automated smoke/E2E test checking the filtered list's actual file output; data and access baselines are prerequisites. M2 also requires relevant negative and failure paths.
 
-## Teljesítmény és helyreállítás
+## Performance and recovery
 
-Korai sanity check: a lista tényleges lapmérete és objektummérete korlátos-e? Ismeretlen korlátnál előbb mérés vagy explicit limit szükséges. M3 mérési célját a célprojekt eszközprofilja és UX-kerete alapján kell rögzíteni; ez a példa nem talál ki univerzális időhatárt.
+Early sanity check: are the list's actual page size and object size bounded? If the limit is unknown, measure or define an explicit limit first. Set the M3 measurement target from the target project's device profile and UX budget; this example does not invent a universal time limit.
 
-Nincs adatírás vagy migráció. Hibánál az export belépési pontja kikapcsolható vagy eltávolítható, a listanézet regresszióellenőrzésével.
+No data writes or migrations are involved. On failure, disable or remove the export entry point and run list-view regression checks.

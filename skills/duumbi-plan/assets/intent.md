@@ -1,19 +1,19 @@
-# Szándék
+# Intent
 
-## Cél és érték
-Milyen felhasználói problémát oldunk meg? Miből látszik a siker?
+## Goal and value
+What user problem are we solving? What would demonstrate success?
 
-## Hatókör
-Mi készül el ebben az önálló szeletben? Mi nem cél?
+## Scope
+What will this independent slice deliver? What is out of scope?
 
-## Elfogadási példák
-Megfigyelhető bemenet, művelet és elvárt eredmény.
+## Acceptance examples
+Observable input, action, and expected result.
 
-## Korlátok és kockázat
-Nem sérthető alapkövetelmények, releváns környezet, ismert bizonytalanság.
+## Constraints and risk
+Invariants, relevant environment, and known uncertainty.
 
-## Döntések és nyitott kérdések
-A megerősített döntést válaszd el a javaslattól. Ne találj ki felelőst vagy határidőt.
+## Decisions and open questions
+Separate confirmed decisions from proposals. Do not invent an owner or deadline.
 
-## Források
-A kérés és a lényegi tények visszakereshető alapja.
+## Sources
+Traceable basis for the request and material facts.

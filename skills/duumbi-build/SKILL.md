@@ -1,30 +1,30 @@
 ---
 name: duumbi-build
-description: "Specifikációhoz plan.md végrehajtási terv készítése és a felhasználó által kért megvalósítás elvégzése kis, ellenőrizhető változtatásokkal. Használd duumbi-flow build feladathoz. Tervkérésnél csak a tervet készíti el; nem helyettesít önálló review-t vagy kiadási engedélyt."
+description: "Prepare a plan.md execution plan for a specification and carry out user-requested implementation in small, verifiable changes. Use for duumbi-flow build tasks. For planning-only requests, produce only the plan; does not replace a separate review or release authorization."
 license: MIT
 ---
 
-# Terv és megvalósítás
+# Plan and implement
 
-A build munkalépés terve `plan.md`. Először állapítsd meg: a felhasználó tervet, megvalósítást vagy mindkettőt kérte-e. A „csak terv” kérésnél ne módosíts termékkódot.
+The build step's plan is `plan.md`. First determine whether the user requested a plan, implementation, or both. Do not modify product code for a planning-only request.
 
-## Munkamenet
+## Workflow
 
-1. Olvasd el a kérést, a projekt szabályait, a releváns `intent.md` és `spec.md` tartalmát, a kódot és a munkaterület aktuális állapotát. Védd a meglévő felhasználói változtatásokat.
-2. A [plan sablon](assets/plan.md) alapján tervezd meg a legkisebb értékelhető lépéseket, az ellenőrzést és a helyreállítást. Ha egy szükséges szerződés hiányzik, azt jelöld; ne találj ki üzleti döntést.
-3. Megvalósítási megbízásnál dolgozz a projekt branching/worktree rendjében. Ne hozz létre hosszú életű WORK/RIGHT/FAST brancheket.
-4. Elsőként a meglévő kódot, standard könyvtárat és natív képességeket használd. Őrizd meg a szükséges hibakezelést, biztonságot és akadálymentességet.
-5. Futtasd a változás kockázatához és célzott kapujához szükséges ellenőrzéseket. A tervben külön jelöld a lefutott, sikertelen és elmaradt lépéseket. A parancs kiadása nem bizonyítja a sikeres befejezést.
-6. Vesd össze az eredményt a szerződéssel. Ha a megvalósítás érdemben eltér, frissítsd a kapcsolódó dokumentumot az engedélyezett körben, vagy jelezd a döntési igényt.
+1. Read the request, project rules, relevant `intent.md` and `spec.md`, code, and current workspace state. Protect existing user changes.
+2. Use the [plan template](assets/plan.md) to define the smallest evaluable steps, verification, and recovery. Flag a missing required contract; do not invent business decisions.
+3. For implementation requests, follow the project's branching and worktree conventions. Do not create long-lived WORK/RIGHT/FAST branches.
+4. Prefer existing code, the standard library, and native capabilities. Preserve necessary error handling, security, and accessibility.
+5. Run checks appropriate to the change's risk and target gate. Distinguish completed, failed, and omitted steps in the plan. Issuing a command does not establish successful completion.
+6. Compare the result with the contract. For material deviations, update related documentation within the authorized scope or identify the decision needed.
 
-## Érettségi határok
+## Maturity boundaries
 
-- M1 célú funkciószelethez legalább egy automatizált, valódi eredményt vizsgáló happy-path smoke/E2E teszt kell. A biztonsági minimum és a meglévő regresszióellenőrzések végig megmaradnak.
-- M2-nél ellenőrizd a releváns negatív/hibautakat, hozzáféréseket, kompatibilitást és helyreállítást. A célprojekt kapui mérvadók.
-- M3-nál a korábban rögzített környezetben és terheléssel mérj. Csak kimutatott hiányt optimalizálj; megfelelő eredmény mellett nincs kötelező átírás.
-- Teszt- vagy mérési hiba után ne lazítsd csendben a célértéket. Biztonságos folytatás hiányában őrizd meg az állapotot, és jelezd a blokkot.
-- Új buildnél az érintett bizonyítékokat frissítsd. Ismeretlen változási hatásnál szélesebb ellenőrzés kell.
+- A feature slice targeting M1 requires at least one automated happy-path smoke/E2E test checking a real outcome. The security baseline and existing regression checks remain throughout.
+- At M2, verify relevant negative and failure paths, access controls, compatibility, and recovery. The target project's gates govern.
+- At M3, measure in the predefined environment and load conditions. Optimize only demonstrated shortfalls; a satisfactory result does not require a rewrite.
+- Do not silently relax targets after a test or measurement fails. If safe progress is impossible, preserve the state and report the blocker.
+- Refresh affected evidence for a new build. Unknown change impact requires broader checks.
 
-A WORK végén legyen értékdöntés és indokolt discard/evolve/rewrite döntés. A fejlesztési elkészültségből ne következtess jóváhagyott érettségre vagy felhasználói kiadásra.
+End WORK with a value decision and a justified discard/evolve/rewrite decision. Do not infer approved maturity or user release from implementation completion.
 
-A feladat önmagában nem ad felhatalmazást külső üzenetküldésre, publikálásra vagy production-módosításra. Ezekhez a felhasználó megbízása és a célprojekt előírásai mérvadók. A megvalósítás végén röviden add meg a változást, ellenőrzést és fennmaradó kockázatot.
+The task alone does not authorize external messaging, publication, or production changes. The user's assignment and target project rules govern those actions. Finish implementation with a brief account of the change, verification, and residual risk.

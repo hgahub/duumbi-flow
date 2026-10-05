@@ -1,53 +1,55 @@
 # duumbi-flow
 
-**Make it Work → Make it Right → Make it Fast.** Magyar fejlesztési módszertan és kis, önálló Agent Skills a bizonyítható eredményhez.
+**Make it Work → Make it Right → Make it Fast.** An engineering methodology and small, standalone Agent Skills for evidence-backed outcomes.
 
-> Kezdeti, pilotra szánt csomag. A szerkezeti ellenőrzés nem bizonyítja a skillek hatékonyságát valós fejlesztésben.
+> Initial package intended for a pilot. Structural checks do not establish skill effectiveness in real development.
 
-## Kezdd itt
+All repository content is maintained in English. Translate during conversations when needed; do not maintain translated copies in this repository.
 
-- [Módszertan](docs/methodology.hu.md): érték, érettség és felhasználói elérhetőség.
-- [Munkafolyamat és fájlnevek](docs/workflow.hu.md): hogyan kapcsolódik a négy munkalépés a három minőségi szinthez.
-- [Telepítés](docs/installation.hu.md): a skillek külön is használhatók.
-- [Kidolgozott példa](examples/export-filtered-list/intent.md): egy szűk funkció négy dokumentuma.
-- [Pilot](docs/pilot.hu.md): mi igazolja, hogy a módszer segít.
-- [GitHub-megvalósítási javaslat](docs/github.hu.md): nyilvántartás, Project, CI és kiadás.
+## Start here
 
-## Két külön fogalom
+- [Methodology](docs/methodology.md): value, maturity, and user exposure.
+- [Workflow and file conventions](docs/workflow.md): how four work steps relate to three quality levels.
+- [Installation](docs/installation.md): skills can be used independently.
+- [Worked example](examples/export-filtered-list/intent.md): four documents for a narrow feature slice.
+- [Pilot](docs/pilot.md): how to establish whether the method helps.
+- [GitHub implementation proposal](docs/github.md): records, Projects, CI, and releases.
 
-| Munkalépés | Kimenet | Kérdés |
+## Distinct concepts
+
+| Work step | Output | Question |
 | --- | --- | --- |
-| plan | `intent.md` | Mit akarunk elérni, és miért? |
-| design | `spec.md` | Milyen viselkedést és korlátokat vállalunk? |
-| build | `plan.md` + megvalósítás | Hogyan készítjük el és ellenőrizzük? |
-| review | `review.md` | Mit igazolnak a bizonyítékok, és mi hiányzik? |
+| plan | `intent.md` | What do we want to achieve, and why? |
+| design | `spec.md` | What behavior and constraints do we commit to? |
+| build | `plan.md` + implementation | How will we build and verify it? |
+| review | `review.md` | What does the evidence establish, and what is missing? |
 
-**WORK / RIGHT / FAST** a fejlesztés fókusza; **M1 / M2 / M3** az igazolt érettség. Ezek nem branchnevek, és nem egyeznek meg a fenti munkalépésekkel.
+**WORK / RIGHT / FAST** describe the development focus; **M1 / M2 / M3** describe verified maturity. They are not branch names and do not map directly to the work steps above.
 
 ```mermaid
 flowchart LR
-    I["intent.md · szándék"] --> S["spec.md · szerződés"]
-    S --> P["plan.md · végrehajtás"]
-    P --> R["review.md · bizonyíték"]
-    R -->|hiány vagy hiba| S
+    I["intent.md · intent"] --> S["spec.md · contract"]
+    S --> P["plan.md · execution"]
+    P --> R["review.md · evidence"]
+    R -->|gap or defect| S
 ```
 
-## Skillek
+## Skills
 
-| Skill | Mikor használd? |
+| Skill | When to use it |
 | --- | --- |
-| [duumbi-plan](skills/duumbi-plan/SKILL.md) | Egy fejlesztési elképzelés hatókörének és sikerfeltételeinek tisztázásához. |
-| [duumbi-design](skills/duumbi-design/SKILL.md) | Az elfogadási példák és a műszaki szerződés kidolgozásához. |
-| [duumbi-build](skills/duumbi-build/SKILL.md) | Végrehajtási tervhez és a kért megvalósításhoz, kockázatarányos ellenőrzéssel. |
-| [duumbi-review](skills/duumbi-review/SKILL.md) | Forrásra, diffre és tényleges ellenőrzésekre épülő felülvizsgálathoz. |
-| [knowledge-base](skills/knowledge-base/SKILL.md) | Tudástár kereséséhez, és kérésre forrásalapú bővítéséhez. |
+| [duumbi-plan](skills/duumbi-plan/SKILL.md) | Clarify the scope and success criteria of a development idea. |
+| [duumbi-design](skills/duumbi-design/SKILL.md) | Define acceptance examples and the technical contract. |
+| [duumbi-build](skills/duumbi-build/SKILL.md) | Prepare an execution plan and perform requested implementation with verification proportional to risk. |
+| [duumbi-review](skills/duumbi-review/SKILL.md) | Review sources, diffs, and actual verification evidence. |
+| [knowledge-base](skills/knowledge-base/SKILL.md) | Search a knowledge base and, when requested, maintain it using traceable sources. |
 
-A `$skill-name` hivatkozás az ezt támogató kliensekben használható; más kliensek saját meghívási módot adhatnak. Egyik skill sem igényli a többi telepítését, külső előfizetést vagy konkrét issue trackert. A sablonok a skill saját `assets/` mappájában vannak.
+Clients that support it can invoke a skill as `$skill-name`; other clients may provide their own invocation mechanism. No skill requires the others, an external subscription, or a particular issue tracker. Templates live in each skill's own `assets/` directory.
 
-## Korlátok
+## Limitations
 
-A repo útmutatást és dokumentumsablonokat ad. Nem futtat kiadást, nem állít be branchvédelmet, és nem biztosít önmagában CI/CD enforcementet. A felhasználó utasítása és a célprojekt szabályai határozzák meg a végrehajtás hatókörét.
+This repository provides guidance and document templates. It does not run releases, configure branch protection, or enforce product CI/CD gates by itself. The user's request and the target project's rules determine the scope of execution.
 
-## Hozzájárulás és licenc
+## Contributing and license
 
-[CONTRIBUTING.md](CONTRIBUTING.md) · [MIT](LICENSE) · [Inspirációk](docs/references.hu.md)
+[CONTRIBUTING.md](CONTRIBUTING.md) · [MIT](LICENSE) · [References](docs/references.md)

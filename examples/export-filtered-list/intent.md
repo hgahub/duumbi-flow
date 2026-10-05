@@ -1,24 +1,24 @@
-# Szűrt lista exportálása
+# Export a filtered list
 
-**Szintetikus oktatási példa.** Nincs mögötte implementáció, felhasználói jóváhagyás vagy tesztfutás.
+**Synthetic learning example.** No implementation, user approval, or test run exists behind it.
 
-## Cél és hatókör
+## Goal and scope
 
-A felhasználó a megnyitott feladatlista aktuálisan látható sorait JSON-fájlba szeretné menteni, hogy egy hibajelentéshez csatolhassa őket.
+The user wants to save the currently visible rows of an open task list as a JSON file to attach to a bug report.
 
-Egy szelet: az aktuális oldal exportja, a szűréssel és sorrenddel együtt. Nem cél az összes lap exportja, új lekérdezés, háttérfeladat, CSV vagy új jogosultsági rendszer.
+One slice: export the current page, preserving its filter and ordering. Exporting all pages, making a new query, background jobs, CSV, and a new authorization system are out of scope.
 
-## Elfogadási példa
+## Acceptance example
 
-A lista öt sorából a szűrés kettőt mutat. Export után a fájl pontosan ezt a két sort tartalmazza, a képernyő sorrendjében; csak az azonosító, cím és állapot mezővel. Rejtett sor vagy belső mező nem kerülhet bele.
+A filter shows two of five rows. After export, the file contains exactly those two rows in screen order, with only the identifier, title, and status fields. Hidden rows and internal fields must not be included.
 
-## Állapot és kockázat
+## State and risk
 
-- Értékdöntés: nyitott; a példa nem jelent elfogadást.
-- Érettség: nem igazolt; elérhetőség: nincs implementáció.
-- Kockázat: adat exportálása; a célprojekt adatosztályozása és exportpolitikája még ellenőrizendő.
-- Felelős, WORK-kezdés és lejárat: nincs kijelölve, mert nem indult valódi munka.
+- Value decision: open; the example does not constitute acceptance.
+- Maturity: unverified; exposure: no implementation.
+- Risk: data export; the target project's data classification and export policy still need to be checked.
+- Owner, WORK start, and expiry: unassigned because no real work has started.
 
-## Nyitott döntés
+## Open decision
 
-Engedélyezett-e a célprojektben e három mező helyi exportja? Éles megvalósítás előtt tisztázandó. A [specifikáció](spec.md) erre feltételes javaslatot ad.
+Does the target project allow local export of these three fields? Clarify before implementing for production. The [specification](spec.md) offers a conditional proposal.

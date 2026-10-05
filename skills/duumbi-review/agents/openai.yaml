@@ -1,4 +1,4 @@
 interface:
   display_name: "DUUMBI Review"
-  short_description: "Bizonyítékokra épülő review készítése"
-  default_prompt: "A $duumbi-review segítségével vizsgáld felül a szeletet, és készíts review.md-t."
+  short_description: "Produce a review grounded in actual evidence"
+  default_prompt: "Use $duumbi-review to assess the slice and create review.md."

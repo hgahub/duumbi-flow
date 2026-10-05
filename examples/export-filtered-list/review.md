@@ -1,19 +1,19 @@
-# Review – dokumentációs példa
+# Review — documentation example
 
-**Illusztratív review, nem végrehajtott kódvizsgálat.** Hatókör: az itt szereplő [intent](intent.md), [spec](spec.md) és [plan](plan.md); nincs vizsgált alkalmazáscommit.
+**Illustrative review, not an executed code review.** Scope: the [intent](intent.md), [spec](spec.md), and [plan](plan.md) in this directory; no application commit has been examined.
 
-## Döntési javaslat
+## Proposed decision
 
-A szelet kellően szűk egy későbbi pilothoz. Megvalósítási és M1-jóváhagyáshoz nincs elegendő bizonyíték.
+The slice is narrow enough for a later pilot. There is insufficient evidence for implementation approval or M1 approval.
 
-## Nyitott akadály
+## Open blocker
 
-**Exportpolitika:** a specifikáció helyesen nyitva hagyja, hogy a megtekinthető adat letölthető-e. Ennek tisztázása nélkül az export nem engedhető éles használatba. A döntést a célprojekt illetékesének kell meghoznia.
+**Export policy:** the specification correctly leaves open whether viewable data may be downloaded. Export cannot be enabled in production before that is resolved. The appropriate authority in the target project must make this decision.
 
-## Ellenőrzések állapota
+## Verification status
 
-- Az elfogadási példák és a tervezett ellenőrzések le vannak írva.
-- Kód, tesztkörnyezet, tesztfutás, mérés és felhasználói visszajelzés nincs.
-- A tervezett teszt nem lefutott teszt; érettségi kapu nem teljesült.
+- Acceptance examples and planned checks are documented.
+- No code, test environment, test run, measurement, or user feedback exists.
+- A planned test is not a completed test; no maturity gate has been met.
 
-Egy valódi review ezt a bejegyzést a vizsgált commitra, tényleges megállapításokra és futási bizonyítékokra cseréli.
+A real review replaces this entry with the examined commit, actual findings, and execution evidence.

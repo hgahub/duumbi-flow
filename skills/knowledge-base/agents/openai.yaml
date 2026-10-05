@@ -1,4 +1,4 @@
 interface:
-  display_name: "Tudástár"
-  short_description: "Forrásalapú tudáskeresés és kért karbantartás"
-  default_prompt: "A $knowledge-base segítségével keresd meg és ellenőrizd a kérdéshez tartozó tudást."
+  display_name: "Knowledge Base"
+  short_description: "Search and maintain knowledge using sources"
+  default_prompt: "Use $knowledge-base to find and verify knowledge relevant to the question."

@@ -1,23 +1,23 @@
-# Végrehajtási terv
+# Execution plan
 
-Kapcsolódó szerződés: spec.md. Ez a build lépés terve.
+Related contract: spec.md. This is the plan for the build step.
 
-## Kiinduló állapot
-Vizsgált verzió, meglévő változtatások, munkamód és megbízási hatókör.
+## Starting state
+Examined version, existing changes, working mode, and assignment scope.
 
-## Lépések
-Kis, önállóan ellenőrizhető lépések; függőségek és várt kimenet.
-Állapotok: tervezett, folyamatban, elvégzett, blokkolt.
+## Steps
+Small, independently verifiable steps; dependencies and expected outputs.
+States: planned, in progress, completed, blocked.
 
-## Ellenőrzés
-Mely parancs vagy megfigyelés milyen állítást igazol? Mi az elvárt eredmény?
+## Verification
+Which command or observation establishes which claim? What result is expected?
 
-## Helyreállítás
-Hogyan állítható meg vagy fordítható vissza a változtatás?
+## Recovery
+How can the change be stopped or reversed?
 
-## Végrehajtási eredmények
-Ténylegesen lefutott ellenőrzés, verzió, eredmény és megmaradt bizonytalanság.
-A tervezett tesztet ne jelöld végrehajtottnak.
+## Execution results
+Checks actually run, version, result, and remaining uncertainty.
+Do not mark a planned test as completed.
 
-## Kódsors és következő döntés
-WORK végén discard/evolve/rewrite; később a még szükséges kapu vagy döntés.
+## Code disposition and next decision
+At the end of WORK: discard/evolve/rewrite; later: the remaining gate or decision.

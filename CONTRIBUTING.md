@@ -1,14 +1,14 @@
-# Hozzájárulás
+# Contributing
 
-A dokumentáció magyar, a fájl- és skillnevek angol, kisbetűs, kötőjeles neveket használnak.
+Keep all repository content in English: documentation, skills, templates, examples, diagram labels, metadata, and commit messages. Use lowercase English names with hyphens for files and skills. Translate during conversations when needed; do not maintain localized copies in this repository.
 
-Egy változtatás oldjon meg egy tényleges problémát. Skilljavításhoz mutass reprodukálható kérést és elvárt viselkedést. Ne adj általános szabályt egyetlen különleges eset miatt.
+Each change should solve a concrete problem. For a skill correction, provide a reproducible request and expected behavior. Do not turn one special case into a universal rule.
 
-- A skill csak saját mappáján belüli erőforrástól függjön.
-- Tartsd meg a felhasználói hatókört és a bizonyítékok korlátait.
-- Új publikálási, telepítési vagy külső üzenetküldési automatizmus külön döntést igényel.
-- Valós ügyféladat, titok vagy személyes környezetútvonal ne kerüljön a repóba.
-- Futtasd a [fejlesztői ellenőrzést](docs/installation.hu.md).
-- Commit előtt: `pre-commit run --all-files`. A commit üzenete a `.gitmessage` mintát kövesse.
+- A skill must depend only on resources within its own directory.
+- Preserve the user's scope and the limits of the evidence.
+- New publication, installation, or external messaging automation requires a separate decision.
+- Do not commit real customer data, secrets, or personal environment paths.
+- Run the [development checks](docs/installation.md).
+- Before committing, run `pre-commit run --all-files`. Follow the `.gitmessage` template.
 
-A PR röviden írja le a problémát, a változást és az ellenőrzést. Ha a viselkedési teszt nem futott, jelezd. Külső forrásból átvett anyagnál őrizd meg a szükséges licencet és megjelölést.
+A PR should briefly describe the problem, the change, and verification. State when behavioral tests have not run. Preserve required licenses and attribution for material taken from external sources.

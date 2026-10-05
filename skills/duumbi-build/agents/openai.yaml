@@ -1,4 +1,4 @@
 interface:
   display_name: "DUUMBI Build"
-  short_description: "Végrehajtási terv és ellenőrzött megvalósítás"
-  default_prompt: "A $duumbi-build segítségével készíts plan.md-t és valósítsd meg a kért szeletet."
+  short_description: "Plan and verify the requested implementation"
+  default_prompt: "Use $duumbi-build to create plan.md and implement the requested slice."

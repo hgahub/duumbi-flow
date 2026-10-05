@@ -1,18 +1,18 @@
-# Felülvizsgálat
+# Review
 
-## Hatókör és vizsgált verzió
-Mi szerepelt a review-ban, és mi nem? Pontos commit/diff/dokumentumverzió.
+## Scope and examined version
+What was included and excluded? Exact commit/diff/document version.
 
-## Megállapítások
-Súlyosság, hely/hivatkozás, kiváltó eset, következmény és javasolt javítás.
-Ha nincs igazolt hiba, mondd ki a vizsgálat hatókörével együtt.
+## Findings
+Severity, location/reference, triggering case, consequence, and proposed fix.
+If no defect is established, say so together with the review scope.
 
-## Ellenőrzési bizonyíték
-Tényleges futások és eredmények; külön a nem futott vagy nem hozzáférhető ellenőrzések.
+## Verification evidence
+Actual runs and results; separately list checks not run or unavailable.
 
-## Döntési javaslat
-Megfelelő a vizsgált célra / javítás szükséges / nincs elegendő bizonyíték.
-Ez a javaslat nem emberi jóváhagyás vagy kiadási engedély.
+## Proposed decision
+Suitable for the examined purpose / changes required / insufficient evidence.
+This recommendation is not human approval or release authorization.
 
-## Fennmaradó kockázat
-Nyitott kérdések és szükséges következő lépések.
+## Residual risk
+Open questions and required next steps.

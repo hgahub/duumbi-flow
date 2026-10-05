@@ -86,7 +86,7 @@ def validate_links(path, root):
 
 def validate(root):
     errors = []
-    for required in ("README.md", "LICENSE", "docs/methodology.hu.md", "docs/workflow.hu.md"):
+    for required in ("README.md", "LICENSE", "docs/methodology.md", "docs/workflow.md"):
         if not (root / required).is_file():
             errors.append(f"{required}: required file is missing")
     folders = sorted(p for p in (root / "skills").glob("*") if p.is_dir())
